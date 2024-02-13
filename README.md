@@ -1,6 +1,7 @@
 # Task-Manager
 This project is a simple task manager web application that utilizes Firebase Realtime Database for task storage. Users can add tasks, mark them as complete, and remove them from the list.
 
+[Task-Manager Web page](https://task-manager98.netlify.app/)
 ## Getting Started
 
 Follow the steps below to set up the project and connect it to your own Firebase Realtime Database.
