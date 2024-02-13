@@ -18,14 +18,12 @@ Follow the steps below to set up the project and connect it to your own Firebase
       https://github.com/anishPancholi/Task-Manager/blob/main/README.md
 Navigate to the project directory:
 
-bash
-Copy code
-cd task-manager-firebase
+```bash
+   cd task-manager-firebase
 Install dependencies:
 
-bash
-Copy code
-npm install
+```bash
+   npm install
 Firebase Configuration
 Go to the Firebase Console and create a new project.
 
@@ -34,31 +32,33 @@ Click on "Add app" and select the web platform (</> icon).
 Register the app and copy the configuration object provided.
 
 javascript
-Copy code
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID",
-};
+```bash
+   const firebaseConfig = {
+       apiKey: "YOUR_API_KEY",
+       authDomain: "YOUR_AUTH_DOMAIN",
+       projectId: "YOUR_PROJECT_ID",
+       storageBucket: "YOUR_STORAGE_BUCKET",
+       messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+       appId: "YOUR_APP_ID",
+   };
 Replace the placeholder values in index.js with the actual configuration.
 
 javascript
-Copy code
-// index.js
+```bash
+   // index.js
+   
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+   import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"
+   import { getDatabase, ref } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+   
+   const appSettings = {
+       ...firebaseConfig,
+       // databaseURL: "YOUR_DATABASE_URL" // Optional, you can remove this line
+      /*Paste Your firebase database url */
+   };
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"
-import { getDatabase, ref } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+   const app = initializeApp(appSettings);
 
-const appSettings = {
-    ...firebaseConfig,
-    // databaseURL: "YOUR_DATABASE_URL" // Optional, you can remove this line
-};
-
-const app = initializeApp(appSettings);
 Optionally, you can set up authentication in your Firebase project and modify the authentication logic in index.js accordingly.
 
 Usage
