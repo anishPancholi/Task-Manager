@@ -15,7 +15,7 @@ Follow the steps below to set up the project and connect it to your own Firebase
 1. Clone the repository to your local machine:
 
    ```bash
-  git clone https://github.com/anishPancholi/Task-Manager/blob/main/README.md
+     git clone https://github.com/anishPancholi/Task-Manager/blob/main/README.md
 Navigate to the project directory:
 
 bash
