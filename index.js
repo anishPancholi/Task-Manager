@@ -3,6 +3,7 @@ import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com
 
 const appSettings = {
     databaseURL: "https://task-manager-51aec-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    //paste your database url 
 }
 
 const app = initializeApp(appSettings)
